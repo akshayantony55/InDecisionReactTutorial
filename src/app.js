@@ -11,11 +11,13 @@ var template = (
     </ol>
   </div>
 );
-
+var user = {
+  name: "Akshay"
+};
 var templateTwo = (
   <div>
-    <h1>Akshay Antony</h1>
-    <p>Age: --</p>
+    <h1>{user.name}</h1>
+    <p>Age: --112</p>
     <p>Location: Kerala</p>
   </div>
 );

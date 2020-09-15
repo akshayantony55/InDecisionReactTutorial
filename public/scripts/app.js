@@ -31,19 +31,21 @@ var template = React.createElement(
     )
   )
 );
-
+var user = {
+  name: "Akshay"
+};
 var templateTwo = React.createElement(
   'div',
   null,
   React.createElement(
     'h1',
     null,
-    'Akshay Antony'
+    user.name
   ),
   React.createElement(
     'p',
     null,
-    'Age: --'
+    'Age: --112'
   ),
   React.createElement(
     'p',
