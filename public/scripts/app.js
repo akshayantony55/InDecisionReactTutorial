@@ -9,6 +9,7 @@ var app = {
 };
 
 var onFormSubmit = function onFormSubmit(e) {
+  // prevent full page refresh 
   e.preventDefault();
 
   var option = e.target.elements.option.value;
@@ -26,7 +27,7 @@ var onRemoveAll = function onRemoveAll() {
 };
 
 var appRoot = document.getElementById('app');
-
+var numbers = [1, 2, 3];
 var render = function render() {
   var template = React.createElement(
     'div',
@@ -59,16 +60,14 @@ var render = function render() {
     React.createElement(
       'ol',
       null,
-      React.createElement(
-        'li',
-        null,
-        'Item one'
-      ),
-      React.createElement(
-        'li',
-        null,
-        'Item two'
-      )
+      numbers.map(function (number) {
+        return React.createElement(
+          'li',
+          { key: number },
+          'Item: ',
+          number
+        );
+      })
     ),
     React.createElement(
       'form',
