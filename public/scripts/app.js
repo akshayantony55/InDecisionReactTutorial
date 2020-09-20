@@ -60,12 +60,12 @@ var render = function render() {
     React.createElement(
       'ol',
       null,
-      numbers.map(function (number) {
+      app.options.map(function (option) {
         return React.createElement(
           'li',
-          { key: number },
+          { key: option },
           'Item: ',
-          number
+          option
         );
       })
     ),
