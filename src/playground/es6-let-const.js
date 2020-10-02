@@ -1,12 +1,22 @@
-var name="Akshay";
-var name="Nik"; // valid, overrides first value...
-// function scoped
+var nameVar = 'Andrew';
+var nameVar = 'Mike';
+console.log('nameVar', nameVar);
 
-let nameLet = "Jen";
-let nameLet = "Jen1"; // not valid
-nameLet = "Jen2"; //valid
-// function scoped and block scoped
+let nameLet = 'Jen';
+nameLet = 'Julie';
+console.log('nameLet', nameLet);
 
-const a =5;
-a=4; // not valid
-// function scoped and block scoped
+const nameConst = 'Frank';
+console.log('nameConst', nameConst);
+
+// Block scoping
+
+const fullName = 'Jen Mead';
+let firstName;
+
+if (fullName) {
+  firstName = fullName.split(' ')[0];
+  console.log(firstName);
+}
+
+console.log(firstName);
